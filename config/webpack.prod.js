@@ -5,6 +5,9 @@ const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = merge(main, {
 	mode: 'production',
+	output: {
+		publicPath: './'
+	},
 	optimization: {
 		minimize: true,
 		minimizer: [
